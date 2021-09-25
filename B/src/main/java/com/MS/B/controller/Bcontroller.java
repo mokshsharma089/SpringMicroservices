@@ -29,4 +29,9 @@ public class Bcontroller {
 		return ResponseEntity.ok(bserv.getCustomerCarrier(name));
 	}
 	
+	@GetMapping("/feign/{name}")
+	public ResponseEntity<String> getCustomerCarrierUsingFeign(@PathVariable String name){
+		return ResponseEntity.ok(bserv.getCustomerCarrierUsingFeign(name));
+	}
+	
 }
